@@ -24,6 +24,6 @@ The general form of solutions would look like:
 
 One example solution to the problem where M = 4 and N = 24 is provided below:
 ```
-  9 * 2 + 8 - 2 = 24
+  9 * 2 + 7 - 1 = 24
 ```
 
