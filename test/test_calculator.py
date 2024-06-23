@@ -118,6 +118,10 @@ class TestCalculate(unittest.TestCase):
         calculator.push([9,2,operator.mul,7,operator.add,1,operator.sub])
         self.assertEqual(calculator.calculate(), 24, 'incorrect result')
 
+    def test_numcom_calculation2(self):
+        calculator = Calculator()
+        calculator.push([9,2,operator.mul,7,operator.add,1,operator.sub])
+        self.assertEqual(calculator.calculate(), 24, 'incorrect result')
 
 if __name__ == '__main__':
     logging.basicConfig(filename='debug.log', level=logging.DEBUG)
