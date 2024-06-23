@@ -1,12 +1,14 @@
 # Number of Combinations Calculator
 
 ## Problem Statement
-This project calculates all unique permutations of M digits (1-9) which combined using M-1 basic mathmatical operations equal the number N. Allowed
-operators include:
+This project calculates all unique permutations of 4 digits (1-9) which combined
+using 3 of the following basic mathmatical operations equal the number 24:
   - Addition (+)
   - Subtraction (-)
   - Multiplication (*)
   - Division (/)
+
+In the future, I may extend this to be M digits equalling any number N.
 
 ### Definitions and Considerations
 For the purposes of this project, the following terms are defined as follows.
@@ -19,10 +21,10 @@ For the purposes of this project, the following terms are defined as follows.
 ## Solutions
 The general form of solutions would look like:
 ```
-  Digit_0 Operator_0 Digit_1 Operator_1 Digit_2 ... Operator_(M-1) Digit_M
+  Digit_0 Oper_0 Digit_1 Oper_1 Digit_2 Oper_2 Digit_3
 ```
 
-One example solution to the problem where M = 4 and N = 24 is provided below:
+One example solution to the problem is provided below:
 ```
   9 * 2 + 7 - 1 = 24
 ```
