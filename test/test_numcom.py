@@ -1,25 +1,33 @@
 import unittest
 import context
+import operator, logging
 from app.numcom import NumCom
 
-class TestNumCom(unittest.TestCase):
+class TestRun(unittest.TestCase):
 
-    def test_push_array(self):
+    def test_run(self):
         numcom = NumCom()
-        numcom.push([1,2,'+'])
-        self.assertEqual(numcom.stack, [1,2,'+'], 'The stack is wrong.')
+        self.assertEqual(numcom.run(), 4, 'output is wrong.')
 
-    def test_push_int(self):
+class TestComposeRpnStack(unittest.TestCase):
+    def test1(self):
         numcom = NumCom()
-        numcom.push(1)
-        numcom.push(2)
-        self.assertEqual(numcom.stack, [1,2], 'The stack is wrong.')
-    
-    def test_push_operator(self):
-        numcom = NumCom()
-        numcom.push('+')
-        numcom.push('-')
-        self.assertEqual(numcom.stack, ['+','-'], 'The stack is wrong.')
+        digits = [9,2,7,1]
+        operators = [operator.mul,operator.add,operator.sub]
+        self.assertEqual(numcom.compose_rpn_stack(digits,operators), [9,2,operator.mul,7,operator.add,1,operator.sub])
 
+class TestGenerateDigitList(unittest.TestCase):
+    def test_correct_list_length(self):
+        numcom = NumCom()
+        numcom.generate_digit_list()
+        self.assertEqual(len(numcom.DIGIT_LIST), 3024)
+
+class TestGenerateOperatorList(unittest.TestCase):
+    def test_correct_list_length(self):
+        numcom = NumCom()
+        numcom.generate_operator_list()
+        self.assertEqual(len(numcom.OPERATOR_LIST), 24)
+        
 if __name__ == '__main__':
+    logging.basicConfig(filename='debug.log', level=logging.DEBUG)
     unittest.main()
