@@ -27,3 +27,16 @@ One example solution to the problem where M = 4 and N = 24 is provided below:
   9 * 2 + 7 - 1 = 24
 ```
 
+## Running
+Run the combination calculator by running the `main.py` file. e.g.
+
+```
+python3 app/main.py
+```
+
+## Testing
+Run the test suite by running the following in your terminal:
+
+```
+python3 -m unittest discover test
+```
