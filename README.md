@@ -1,5 +1,11 @@
 # Number of Combinations Calculator
 
+## Note from the author
+This project is primarily an exercise in practicing what a more maintainable vanilla python project may look like.
+One area of focus being the implementation of unit testing in Python. I make no assertion that the resulting
+implementation is industry-standard, or even a good idea. :)
+
+
 ## Problem Statement
 This project calculates all unique permutations of 4 digits (1-9) which combined
 using 3 of the following basic mathmatical operations equal the number 24:
